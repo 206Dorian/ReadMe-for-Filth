@@ -20,11 +20,6 @@ inquirer
       },
       {
         type: 'input',
-        name: 'table of contents',
-        message: 'Tell me about your table of contents?',
-      },
-      {
-        type: 'input',
         name: 'installation',
         message: 'How is this being installed?',
       },
@@ -50,9 +45,14 @@ inquirer
       },
       {
         type: 'input',
-        name: 'questions',
-        message: 'Questions??',
+        name: 'email',
+        message: 'What is your email?',
       },
+      {
+        type: 'input',
+        name: 'github',
+        message: 'What is your github name?',
+      }
 
 ])
 .then((answers) =>{
@@ -64,24 +64,39 @@ err ? console.log(err) : console.log('Successfully created README!')
 )
 })
 
-const generateReadme = ({ title, description, tableofcontents, installation, usage, license, contributing, tests, questions}) => 
+const generateReadme = ({ title, description, installation, usage, license, contributing, tests, email, github}) => 
 `# ${title}
 
-## Description ${description}
+## Table of Contents - 
+*[Description](#description)
+*[Installation](#installation)
+*[Usage](#usage)
+*[License](#license)
+*[Contributing](#contributing)
+*[Test](#tests)
+*[Questions](#questions)
 
-## Table of Contents ${tableofcontents}
+## Description - 
+${description}
 
-## Installation ${installation}
+## Installation - 
+${installation}
 
-## Usage ${usage}
+## Usage - 
+${usage}
 
-## License ${license}
+## License - 
+${license}
 
-## Contributing ${contributing}
+## Contributing - 
+${contributing}
 
-## Tests ${tests}
+## Tests - 
+${tests}
 
-## Questions ${questions}
+## Questions? - 
+Email me with any questions [${email}](mailto:${email})
+[Here is a link to my Github](https://github.com/${github})
 
 `
 // TODO: Create a function to write README file
