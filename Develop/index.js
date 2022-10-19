@@ -16,7 +16,7 @@ inquirer
       type: 'input',
       name: 'description',
       message: 'How would you describe this?',
-    },git 
+    },
     {
       type: 'input',
       name: 'installation',
@@ -27,7 +27,6 @@ inquirer
       name: 'usage',
       message: 'What is the usage for this?',
     },
-    //
     {
       type: 'list',
       name: 'license',
