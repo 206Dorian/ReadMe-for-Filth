@@ -1,10 +1,9 @@
-// TODO: Include packages needed for this application
+// Included packages needed for this application
 const inquirer = require('inquirer');
 
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-// const questions = [];
+//Created an array of questions for user input = [];
 inquirer
   .prompt([
 
@@ -17,7 +16,7 @@ inquirer
       type: 'input',
       name: 'description',
       message: 'How would you describe this?',
-    },
+    },git 
     {
       type: 'input',
       name: 'installation',
@@ -28,6 +27,7 @@ inquirer
       name: 'usage',
       message: 'What is the usage for this?',
     },
+    //
     {
       type: 'list',
       name: 'license',
@@ -66,15 +66,17 @@ inquirer
 
 function renderLicenseBadge(license) {
 
-  if (license === 'MIT License'){
+  if (license === 'MIT License') {
     return `![GitHub license](https://img.shields.io/badge/license-MIT-blue)`
   }
 
-  if (license === 'Apache License 2.0'){
-    return `![GitHub license](https://img.shields.io/badge/license-Apache--2.0_OR_MIT-blue?style=flat-square)`}
+  if (license === 'Apache License 2.0') {
+    return `![GitHub license](https://img.shields.io/badge/license-Apache--2.0_OR_MIT-blue?style=flat-square)`
+  }
 
-    if (license === 'GNU General Public License v3.0'){
-      return `![GitHub license](https://img.shields.io/badge/license-GPLv3-blue)`}
+  if (license === 'GNU General Public License v3.0') {
+    return `![GitHub license](https://img.shields.io/badge/license-GPLv3-blue)`
+  }
 
 }
 
